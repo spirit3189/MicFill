@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enable microphone — Smart Dictation AI</title>
+    <style>
+      body { min-height: 100vh; margin: 0; display: grid; place-items: center; background: #f3f4f6; color: #18181b; font: 15px/1.5 system-ui; }
+      main { width: min(460px, calc(100% - 40px)); padding: 30px; background: white; border: 1px solid #ddd; border-radius: 16px; box-shadow: 0 16px 45px #0002; }
+      h1 { margin: 0 0 8px; font-size: 24px; }
+      p { color: #555; }
+      usermedia, button { display: block; width: 100%; }
+      button { margin-top: 20px; padding: 12px; border: 0; border-radius: 10px; background: #171719; color: white; font: 650 14px system-ui; cursor: pointer; }
+      #status { min-height: 24px; margin-top: 16px; color: #3f4752; }
+      .privacy { font-size: 12px; color: #737780; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Enable microphone</h1>
+      <p>Smart Dictation AI records only while you actively dictate. Audio is processed locally and is never uploaded.</p>
+      <usermedia id="media-control"><button id="allow" type="button">Allow microphone</button></usermedia>
+      <p id="status" role="status">Click the button to let Chrome show its permission control.</p>
+      <p class="privacy">The temporary permission stream is stopped immediately after access is confirmed.</p>
+    </main>
+    <script type="module" src="./index.ts"></script>
+  </body>
+</html>

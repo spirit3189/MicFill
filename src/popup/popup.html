@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Dictation AI</title>
+    <style>
+      body { width: 300px; margin: 0; padding: 16px; font: 14px system-ui; color: #161616; }
+      h1 { margin: 0 0 8px; font-size: 18px; }
+      p { line-height: 1.4; }
+      button, select { width: 100%; margin-top: 8px; padding: 9px; }
+      label { display: block; margin-top: 10px; font-size: 12px; }
+      #status { min-height: 20px; color: #4b5563; }
+      #models { margin-top: 12px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+      .model { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; font-size: 12px; }
+      .model span:last-child { color: #62666d; text-align: right; }
+      #clear-cache { font-size: 12px; background: white; border: 1px solid #bbb; }
+    </style>
+  </head>
+  <body>
+    <h1>Smart Dictation AI</h1>
+    <p>Audio and text stay on this device. Models download from Hugging Face once.</p>
+    <label>Mode<select id="mode"><option value="clean">Cleaned dictation</option><option value="raw">Raw transcript</option></select></label>
+    <label>Style<select id="styling"><option value="casual">Casual</option><option value="semi-casual">Semi-casual</option><option value="semi-formal">Semi-formal</option><option value="formal">Formal</option></select></label>
+    <button id="microphone" type="button">Allow microphone</button>
+    <button id="enable" type="button">Enable on this site</button>
+    <p id="status" role="status"></p>
+    <section id="models" aria-label="Local model cache"><strong>Local models</strong><div id="model-list">Checking cache…</div></section>
+    <button id="clear-cache" type="button" disabled>Clear downloaded models</button>
+    <script type="module" src="./index.ts"></script>
+  </body>
+</html>
