@@ -1,0 +1,44 @@
+{
+  "name": "smart-dictation-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Private, local WebGPU voice dictation for Chrome.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run verify:package",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "node --test tests/verify-package.test.mjs && vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "vitest run tests/e2e --passWithNoTests",
+    "test": "npm run test:unit && npm run test:integration",
+    "verify:package": "node scripts/verify-package.mjs dist"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.2.0"
+  },
+  "overrides": {
+    "onnxruntime-node": {
+      "adm-zip": "0.6.0"
+    },
+    "sharp": "0.35.0"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.7.1",
+    "@eslint/js": "10.0.1",
+    "@types/chrome": "0.2.7",
+    "@types/node": "22.18.1",
+    "@typescript-eslint/eslint-plugin": "8.67.0",
+    "@typescript-eslint/parser": "8.67.0",
+    "eslint": "10.9.0",
+    "jsdom": "30.0.1",
+    "typescript": "6.0.3",
+    "vite": "7.3.6",
+    "vitest": "4.1.11"
+  }
+}
