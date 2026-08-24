@@ -9,8 +9,8 @@ Audio and text stay in the browser. The extension does not send recordings or tr
 **Input:** i think the answer is forty two no sorry forty three  
 **Output:** I think the answer is 43.
 
-**Input:** send it to support at superwhisper dot com  
-**Output:** Send it to support@superwhisper.com.
+**Input:** send it to support at micfill dot com  
+**Output:** Send it to support@micfill.com.
 
 S1-mini can also remove filler, resolve spoken corrections, add punctuation, format prose or lists, and adjust the writing style.
 
